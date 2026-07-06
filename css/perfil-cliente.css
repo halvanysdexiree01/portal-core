@@ -1,0 +1,281 @@
+/* =====================================
+   CONTENEDOR PRINCIPAL
+===================================== */
+
+.contenedor-perfil {
+    width: 96%;
+    max-width: 1500px;
+    margin: 25px auto;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =====================================
+   TITULO
+===================================== */
+
+.titulo-perfil,
+.contenedor-perfil h1 {
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =====================================
+   TARJETA CLIENTE
+===================================== */
+
+.card-cliente {
+    background: #ffffff;
+
+    border-radius: 12px;
+
+    padding: 28px;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 1px 4px rgba(0,0,0,0.08);
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 40px;
+}
+
+/* =====================================
+   AVATAR CSS
+===================================== */
+
+.avatar-cliente {
+    flex-shrink: 0;
+}
+
+.avatar-circulo {
+    width: 180px;
+    height: 180px;
+
+    background: #eeeeee;
+
+    border-radius: 50%;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.avatar-cabeza {
+    width: 50px;
+    height: 50px;
+
+    background: #7b7b7b;
+
+    border-radius: 50%;
+
+    position: absolute;
+
+    top: 35px;
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+.avatar-cuerpo {
+    width: 110px;
+    height: 70px;
+
+    background: #7b7b7b;
+
+    border-radius: 90px 90px 0 0;
+
+    position: absolute;
+
+    bottom: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+/* =====================================
+   INFORMACION CLIENTE
+===================================== */
+
+.informacion-cliente {
+    flex: 1;
+}
+
+.informacion-cliente h2,
+.card-cliente h2 {
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    margin-bottom: 18px;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =====================================
+   FILAS
+===================================== */
+
+.fila-dato {
+
+    display: flex;
+
+    align-items: center;
+
+    min-height: 48px;
+
+    border-top: 1px solid #e9e9e9;
+}
+
+.fila-dato:last-child {
+    border-bottom: 1px solid #e9e9e9;
+}
+
+.etiqueta {
+
+    width: 170px;
+
+    font-size: 16px;
+
+    font-weight: 700;
+}
+
+.fila-dato span:last-child {
+
+    font-size: 16px;
+}
+
+/* =====================================
+   COMPATIBILIDAD
+===================================== */
+
+.card-cliente p {
+
+    margin-bottom: 10px;
+
+    font-size: 14px;
+}
+
+/* =====================================
+   BOTONES
+===================================== */
+
+.acciones-cliente {
+
+    display: flex;
+
+    gap: 24px;
+
+    margin-top: 20px;
+}
+
+.acciones-cliente button,
+.btn-volver {
+
+    flex: 1;
+
+    height: 50px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition: 0.2s;
+}
+
+/* =====================================
+   NUEVO RECIBO
+===================================== */
+
+#btnGenerarFactura {
+
+    background: #ffcc19;
+
+    color: #000000;
+}
+
+/* =====================================
+   VER RECIBOS
+===================================== */
+
+#btnVerRecibos {
+
+    background: #035ee6;
+
+    color: #ffffff;
+}
+
+/* =====================================
+   VOLVER
+===================================== */
+
+.btn-volver {
+
+    background: #ef2020;
+
+    color: #ffffff;
+}
+
+/* =====================================
+   HOVER
+===================================== */
+
+#btnGenerarFactura:hover,
+#btnVerRecibos:hover,
+.btn-volver:hover {
+
+    transform: translateY(-2px);
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 900px) {
+
+    .card-cliente {
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .informacion-cliente {
+
+        width: 100%;
+    }
+
+    .acciones-cliente {
+
+        flex-direction: column;
+    }
+
+    .avatar-circulo {
+
+        width: 150px;
+        height: 150px;
+    }
+}

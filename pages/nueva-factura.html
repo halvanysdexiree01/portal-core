@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Nuevo Recibo</title>
+
+    <!-- CSS General -->
+    <link
+        rel="stylesheet"
+        href="../css/main.css">
+
+    <!-- CSS de Nueva Factura -->
+    <link
+        rel="stylesheet"
+        href="../css/nueva-factura.css">
+
+</head>
+
+<body>
+
+    <!-- =====================================
+         BARRA SUPERIOR
+    ====================================== -->
+
+    <header class="barra-sistema">
+
+        <div>
+            <div class="logo-sistema">
+                FORORO INTELIGENTE
+            </div>
+
+            <div class="subtitulo-sistema">
+                Sistema Administrativo de Recibos
+            </div>
+        </div>
+
+        <a
+            href="configuracion.html"
+            class="link-configuracion">
+
+            ⚙ Configuración
+
+        </a>
+
+    </header>
+
+    <!-- =====================================
+         CONTENEDOR PRINCIPAL
+    ====================================== -->
+
+    <div class="contenedor-factura">
+
+        <!-- =====================================
+             TÍTULO
+        ====================================== -->
+
+        <h1 class="titulo-pantalla">
+            NUEVO RECIBO
+        </h1>
+
+        <!-- =====================================
+             FORMULARIO DOS COLUMNAS
+        ====================================== -->
+
+        <div class="grid-formulario">
+
+            <!-- ========================= -->
+            <!-- COLUMNA IZQUIERDA -->
+            <!-- ========================= -->
+
+            <div class="columna-formulario">
+
+                <!-- CLIENTE -->
+
+                <div class="grupo-formulario">
+
+                    <label for="nombreCliente">
+                        Cliente
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nombreCliente"
+                        placeholder="Seleccione o busque un cliente"
+                        readonly>
+
+                </div>
+
+                <!-- KIT -->
+
+                <div class="grupo-formulario">
+
+                    <label for="kitCliente">
+                        Cuenta (KIT)
+                    </label>
+
+                    <input
+                        type="text"
+                        id="kitCliente"
+                        placeholder="Ingrese el KIT"
+                        readonly>
+
+                </div>
+
+                <!-- TELEFONO -->
+
+                <div class="grupo-formulario">
+
+                    <label for="telefonoCliente">
+                        Teléfono
+                    </label>
+
+                    <input
+                        type="text"
+                        id="telefonoCliente"
+                        placeholder="Ingrese el teléfono"
+                        readonly>
+
+                </div>
+
+                <!-- CORREO -->
+
+                <div class="grupo-formulario">
+
+                    <label for="correoCliente">
+                        Correo
+                    </label>
+
+                    <input
+                        type="text"
+                        id="correoCliente"
+                        placeholder="Ingrese el correo"
+                        readonly>
+
+                </div>
+
+                <!-- PLAN -->
+
+                <div class="grupo-formulario">
+
+                    <label for="planCliente">
+                        Plan
+                    </label>
+
+                    <input
+                        type="text"
+                        id="planCliente"
+                        placeholder="Ingrese el plan"
+                        readonly>
+
+                </div>
+
+                <!-- DESCRIPCIÓN -->
+
+                <div class="grupo-formulario">
+
+                    <label for="descripcion">
+                        Descripción
+                    </label>
+
+                    <textarea
+                        id="descripcion"
+                        rows="4"
+                        placeholder="Ingrese la descripción del pago"></textarea>
+
+                </div>
+
+            </div>
+
+            <!-- ========================= -->
+            <!-- COLUMNA DERECHA -->
+            <!-- ========================= -->
+
+            <div class="columna-formulario">
+
+                <!-- PRECIO -->
+
+                <div class="grupo-formulario">
+
+                    <label for="precioUSD">
+                        Precio unitario (USD)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="precioUSD"
+                        min="0"
+                        step="0.01"
+                        placeholder="Ingrese el precio unitario">
+
+                </div>
+
+                <!-- CANTIDAD -->
+
+                <div class="grupo-formulario">
+
+                    <label for="cantidad">
+                        Cantidad
+                    </label>
+
+                    <input
+                        type="number"
+                        id="cantidad"
+                        min="1"
+                        value="1">
+
+                </div>
+
+                <!-- FECHA -->
+
+                <div class="grupo-formulario">
+
+                    <label for="fecha">
+                        Fecha
+                    </label>
+
+                    <input
+                        type="text"
+                        id="fecha"
+                        placeholder="dd/mm/aaaa"
+                        readonly>
+
+                </div>
+
+                <!-- TASA -->
+
+                <div class="grupo-formulario">
+
+                    <label for="tasa">
+                        Tasa Bs/USD
+                    </label>
+
+                    <input
+                        type="number"
+                        id="tasa"
+                        placeholder="Ingrese la tasa"
+                        readonly>
+
+                </div>
+
+                <!-- TOTAL USD -->
+
+                <div class="grupo-formulario">
+
+                    <label for="totalUSD">
+                        Total USD
+                    </label>
+
+                    <input
+                        type="text"
+                        id="totalUSD"
+                        value="0,00"
+                        readonly>
+
+                </div>
+
+                <!-- TOTAL BS -->
+
+                <div class="grupo-formulario">
+
+                    <label for="totalBs">
+                        Total Bs
+                    </label>
+
+                    <input
+                        type="text"
+                        id="totalBs"
+                        value="0,00"
+                        readonly>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- =====================================
+             SEPARADOR
+        ====================================== -->
+
+        <div class="separador-formulario"></div>
+
+        <!-- =====================================
+             BOTONES
+        ====================================== -->
+
+        <div class="contenedor-botones">
+
+            <!-- VOLVER -->
+
+            <button
+                type="button"
+                id="btnVolverPerfil"
+                class="btn-volver">
+
+                ← Volver al Perfil
+
+            </button>
+
+            <!-- REGISTRAR -->
+
+            <button
+                type="button"
+                id="btnRegistrarFactura"
+                class="btn-registrar">
+
+                💾 Registrar Recibo
+
+            </button>
+
+            <!-- SIGUIENTE -->
+
+            <button
+                type="button"
+                id="btnVerRecibo"
+                class="btn-siguiente"
+                style="display: none;">
+
+                Siguiente →
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- API -->
+    <script src="../js/api.js"></script>
+
+    <!-- seguridad -->
+    <script src="../js/auth.js"></script>
+
+    <!-- Lógica de Nueva Factura -->
+    <script src="../js/nueva-factura.js"></script>
+
+</body>
+
+</html>

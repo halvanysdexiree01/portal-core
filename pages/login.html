@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - Sistema Starlinkzuela</title>
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!-- CSS del login -->
+    <link rel="stylesheet" href="../css/login.css">
+
+</head>
+
+<body>
+
+    <!-- Contenedor principal -->
+    <main class="login-container">
+
+        <!-- Tarjeta -->
+        <section class="login-card">
+
+            <!-- Encabezado -->
+            <div class="login-header">
+
+                <h1>
+                    FORORO INTELIGENTE
+                </h1>
+
+                <h2>
+                    División STARLINKZUELA
+                </h2>
+
+                <p>
+                    Sistema Administrativo de Recibos
+                </p>
+
+            </div>
+
+            <!-- Formulario -->
+            <form id="formLogin">
+
+                <!-- Correo -->
+                <div class="campo">
+
+                    <label for="correo">
+                        Correo Administrador
+                    </label>
+
+                    <input
+                        type="email"
+                        id="correo"
+                        placeholder="correo@empresa.com"
+                        required>
+
+                </div>
+
+                <!-- Contraseña -->
+                <div class="campo">
+
+                    <label for="clave">
+                        Contraseña
+                    </label>
+
+                    <input
+                        type="password"
+                        id="clave"
+                        placeholder="Ingrese su contraseña"
+                        required>
+
+                </div>
+
+                <!-- Mensaje de error -->
+                <div
+                    id="mensajeError"
+                    class="mensaje-error oculto">
+
+                    Correo o contraseña incorrectos
+
+                </div>
+
+                <!-- Botón -->
+                <button
+                    type="submit"
+                    id="btnLogin">
+
+                    Iniciar Sesión
+
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- API -->
+    <script src="../js/api.js"></script>
+
+    <!-- Login -->
+    <script src="../js/login.js"></script>
+
+</body>
+
+</html>

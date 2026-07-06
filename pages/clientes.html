@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Gestión de Clientes</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/main.css">
+
+    <link
+        rel="stylesheet"
+        href="../css/clientes.css">
+
+</head>
+
+<body>
+
+    <!-- =====================================
+         BARRA SUPERIOR
+    ====================================== -->
+
+    <header class="barra-sistema">
+
+        <div>
+
+            <div class="logo-sistema">
+                FORORO INTELIGENTE
+            </div>
+
+            <div class="subtitulo-sistema">
+                Sistema Administrativo de Recibos
+            </div>
+
+        </div>
+
+        <a
+            href="configuracion.html"
+            class="link-configuracion">
+
+            ⚙ Configuración
+
+        </a>
+
+    </header>
+
+    <!-- =====================================
+         CONTENEDOR PRINCIPAL
+    ====================================== -->
+
+    <div class="contenedor-clientes">
+
+        <!-- =====================================
+             CABECERA CLIENTES
+        ====================================== -->
+
+        <div class="cabecera-clientes">
+
+            <h1>
+                GESTIÓN DE CLIENTES
+            </h1>
+
+            <button
+                id="btnNuevoCliente"
+                class="btn-nuevo-cliente">
+
+                ＋ Nuevo Cliente
+
+            </button>
+
+        </div>
+
+        <!-- =====================================
+             BUSCADOR
+        ====================================== -->
+
+        <section class="busqueda-clientes">
+
+            <input
+                type="text"
+                id="inputBusqueda"
+                placeholder="Buscar cliente por nombre o KIT">
+
+        </section>
+
+        <!-- =====================================
+             FORMULARIO CLIENTE
+             INICIA OCULTO
+        ====================================== -->
+
+        <section
+            id="formularioCliente"
+            class="formulario-cliente oculto">
+
+            <h2>
+                Registrar Cliente
+            </h2>
+
+            <input
+                type="hidden"
+                id="kitOriginal">
+
+            <!-- NOMBRE -->
+
+            <div class="grupo-input">
+
+                <label>Nombre</label>
+
+                <input
+                    type="text"
+                    id="nombre"
+                    placeholder="Nombre completo">
+
+            </div>
+
+            <!-- KIT -->
+
+            <div class="grupo-input">
+
+                <label>KIT</label>
+
+                <input
+                    type="text"
+                    id="cuentaStarlink"
+                    placeholder="KIT303324721">
+
+            </div>
+
+            <!-- TELÉFONO -->
+
+            <div class="grupo-input">
+
+                <label>Teléfono</label>
+
+                <input
+                    type="text"
+                    id="telefono"
+                    placeholder="04121234567">
+
+            </div>
+
+            <!-- CORREO -->
+
+            <div class="grupo-input">
+
+                <label>Correo</label>
+
+                <input
+                    type="email"
+                    id="correo"
+                    placeholder="cliente@gmail.com">
+
+            </div>
+
+            <!-- PLAN -->
+
+            <div class="grupo-input">
+
+                <label>Plan</label>
+
+                <input
+                    type="text"
+                    id="plan"
+                    placeholder="Residencial 200 Mbps">
+
+            </div>
+
+            <!-- DESCRIPCIÓN -->
+
+            <div class="grupo-input">
+
+                <label>Descripción</label>
+
+                <textarea
+                    id="descripcion"
+                    rows="4"
+                    placeholder="Descripción del servicio contratado"></textarea>
+
+            </div>
+
+            <!-- PRECIO USD -->
+
+            <div class="grupo-input">
+
+                <label>Precio USD</label>
+
+                <input
+                    type="number"
+                    id="precioUSDCliente"
+                    placeholder="45"
+                    min="0"
+                    step="0.01">
+
+            </div>
+
+            <!-- CANTIDAD -->
+
+            <div class="grupo-input">
+
+                <label>Cantidad</label>
+
+                <input
+                    type="number"
+                    id="cantidadCliente"
+                    value="1"
+                    min="1"
+                    step="1">
+
+            </div>
+
+            <!-- BOTONES -->
+
+            <div class="acciones-formulario">
+
+                <button
+                    id="btnGuardar"
+                    type="button">
+
+                    Guardar Cliente
+
+                </button>
+
+                <button
+                    type="button"
+                    id="btnCancelar">
+
+                    Cancelar
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- =====================================
+             TABLA CLIENTES
+        ====================================== -->
+
+        <section class="lista-clientes">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Nombre</th>
+
+                        <th>KIT</th>
+
+                        <th>Teléfono</th>
+
+                        <th>Correo</th>
+
+                        <th>Acciones</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="tablaClientes">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </div>
+
+    <!-- =====================================
+         SCRIPTS
+    ====================================== -->
+
+    <script src="../js/api.js"></script>
+
+    <script src="../js/auth.js"></script>
+
+    <script src="../js/clientes.js"></script>
+
+
+</body>
+
+</html> 

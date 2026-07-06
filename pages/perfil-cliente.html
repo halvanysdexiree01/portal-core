@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Perfil del Cliente
+    </title>
+
+    <!-- CSS General -->
+    <link
+        rel="stylesheet"
+        href="../css/main.css">
+
+    <!-- CSS Perfil -->
+    <link
+        rel="stylesheet"
+        href="../css/perfil-cliente.css">
+
+</head>
+
+<body>
+
+    <!-- ===================================== -->
+    <!-- BARRA SUPERIOR -->
+    <!-- ===================================== -->
+
+    <header class="barra-sistema">
+
+        <div>
+
+            <div class="logo-sistema">
+                FORORO INTELIGENTE
+            </div>
+
+            <div class="subtitulo-sistema">
+                Sistema Administrativo de Recibos
+            </div>
+
+        </div>
+
+        <a
+            href="configuracion.html"
+            class="link-configuracion">
+
+            ⚙ Configuración
+
+        </a>
+
+    </header>
+
+
+    <!-- ===================================== -->
+    <!-- CONTENEDOR PRINCIPAL -->
+    <!-- ===================================== -->
+
+    <div class="contenedor-perfil">
+
+        <!-- ===================================== -->
+        <!-- TITULO -->
+        <!-- ===================================== -->
+
+        <h1 class="titulo-perfil">
+
+            PERFIL DEL CLIENTE
+
+        </h1>
+
+
+        <!-- ===================================== -->
+        <!-- TARJETA CLIENTE -->
+        <!-- ===================================== -->
+
+        <div class="card-cliente">
+
+            <!-- ===================================== -->
+            <!-- AVATAR CSS -->
+            <!-- ===================================== -->
+
+            <div class="avatar-cliente">
+
+                <div class="avatar-circulo">
+
+                    <div class="avatar-cabeza"></div>
+
+                    <div class="avatar-cuerpo"></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ===================================== -->
+            <!-- INFORMACION -->
+            <!-- ===================================== -->
+
+            <div class="informacion-cliente">
+
+                <h2 id="nombreCliente">
+
+                    Cargando...
+
+                </h2>
+
+
+                <div class="fila-dato">
+
+                    <span class="etiqueta">
+                        Cuenta:
+                    </span>
+
+                    <span id="kitCliente"></span>
+
+                </div>
+
+
+                <div class="fila-dato">
+
+                    <span class="etiqueta">
+                        Teléfono:
+                    </span>
+
+                    <span id="telefonoCliente"></span>
+
+                </div>
+
+
+                <div class="fila-dato">
+
+                    <span class="etiqueta">
+                        Correo:
+                    </span>
+
+                    <span id="correoCliente"></span>
+
+                </div>
+
+
+                <div class="fila-dato">
+
+                    <span class="etiqueta">
+                        Plan:
+                    </span>
+
+                    <span id="planCliente"></span>
+
+                </div>
+
+
+                <div class="fila-dato">
+
+                    <span class="etiqueta">
+                        Precio USD:
+                    </span>
+
+                    <span id="precioCliente"></span>
+
+                </div>
+
+
+                <div class="fila-dato">
+
+                    <span class="etiqueta">
+                        Cantidad:
+                    </span>
+
+                    <span id="cantidadCliente"></span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ===================================== -->
+        <!-- BOTONES -->
+        <!-- ===================================== -->
+
+        <div class="acciones-cliente">
+
+            <button
+                id="btnGenerarFactura"
+                type="button">
+
+                ＋ Nuevo Recibo
+
+            </button>
+
+            <button
+                id="btnVerRecibos"
+                type="button">
+
+                ☰ Ver Recibos
+
+            </button>
+
+            <a
+                href="clientes.html"
+                class="btn-volver">
+
+                ← Volver a Clientes
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- API -->
+    <script src="../js/api.js"></script>
+
+    <!-- seguridad -->
+    <script src="../js/auth.js"></script>
+
+    <!-- Perfil Cliente -->
+    <script src="../js/perfil-cliente.js"></script>
+
+</body>
+
+</html>

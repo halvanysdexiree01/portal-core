@@ -1,0 +1,96 @@
+/* =====================================
+   BARRA SUPERIOR DEL SISTEMA
+===================================== */
+
+.barra-sistema {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #000000;
+
+    color: #ffffff;
+
+    padding: 16px 20px;
+
+    margin-bottom: 16px;
+
+    border-radius: 12px 12px 0 0;
+
+    box-shadow:
+        0 2px 8px rgba(0,0,0,0.15);
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =====================================
+   BLOQUE IZQUIERDO
+===================================== */
+
+.logo-sistema {
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    letter-spacing: 0;
+
+    color: #ffffff;
+
+    text-transform: uppercase;
+}
+
+/* =====================================
+   SUBTITULO
+===================================== */
+
+.subtitulo-sistema {
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    margin-top: 4px;
+
+    color: #ffffff;
+}
+
+/* =====================================
+   MENU
+===================================== */
+
+.menu-sistema {
+
+    display: flex;
+
+    gap: 20px;
+}
+
+/* =====================================
+   CONFIGURACION
+===================================== */
+
+.link-configuracion {
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.link-configuracion:hover {
+
+    opacity: 0.85;
+}

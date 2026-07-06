@@ -1,0 +1,345 @@
+/* =====================================
+   CONTENEDOR PRINCIPAL
+===================================== */
+
+.contenedor-clientes {
+    width: 95%;
+    max-width: 1500px;
+    margin: 40px auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =====================================
+   BARRA SUPERIOR
+===================================== */
+
+.barra-sistema {
+    background: #000000;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 35px;
+    margin-bottom: 25px;
+}
+
+.logo-sistema {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.subtitulo-sistema {
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.link-configuracion {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* =====================================
+   CABECERA CLIENTES
+===================================== */
+
+.cabecera-clientes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 25px;
+    padding: 10px 0;
+}
+
+.cabecera-clientes h1 {
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/* =====================================
+   BOTÓN NUEVO CLIENTE
+===================================== */
+
+.btn-nuevo-cliente {
+
+    background: #000000;
+    color: white;
+
+    border: none;
+    border-radius: 10px;
+
+    padding: 14px 22px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn-nuevo-cliente:hover {
+    transform: translateY(-2px);
+}
+
+/* =====================================
+   BUSCADOR
+===================================== */
+
+.busqueda-clientes {
+    margin-bottom: 25px;
+}
+
+.busqueda-clientes input {
+
+    width: 100%;
+
+    padding: 16px;
+
+    border: 1px solid #d8d8d8;
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    box-sizing: border-box;
+}
+
+/* =====================================
+   FORMULARIO CLIENTE
+===================================== */
+
+.formulario-cliente {
+
+    background: white;
+
+    padding: 25px;
+
+    margin-bottom: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+/* Título del formulario */
+.formulario-cliente h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* =====================================
+   FORMULARIO OCULTO
+===================================== */
+
+.oculto {
+    display: none;
+}
+
+/* =====================================
+   CAMPOS
+===================================== */
+
+.grupo-input {
+
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 16px;
+}
+
+.grupo-input label {
+
+    font-weight: bold;
+
+    margin-bottom: 6px;
+}
+
+.grupo-input input,
+.grupo-input textarea {
+
+    padding: 12px;
+
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+
+    font-size: 15px;
+
+    box-sizing: border-box;
+}
+
+.grupo-input textarea {
+
+    resize: vertical;
+    min-height: 90px;
+}
+
+/* =====================================
+   BOTONES FORMULARIO
+===================================== */
+
+.acciones-formulario {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 20px;
+
+}
+
+#btnGuardar {
+
+    background: #02070f;
+    color: white;
+
+    border: none;
+
+    padding: 12px 40px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+#btnCancelar {
+
+    background: #fbe70b;
+
+    border: none;
+
+    padding: 12px 40px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+/* =====================================
+   TABLA CLIENTES
+===================================== */
+
+.lista-clientes {
+
+    background: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+
+    margin-top: 25px;
+}
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+thead {
+
+    background: #f5f5f5;
+}
+
+th {
+
+    padding: 18px 16px;
+
+    text-align: left;
+
+    font-size: 16px;
+}
+
+td {
+
+    padding: 16px;
+
+    border-top: 1px solid #e5e5e5;
+}
+
+tbody tr:hover {
+    background: #fafafa;
+}
+
+/* =====================================
+   BOTONES TABLA
+===================================== */
+
+.btn-perfil {
+
+    background: #f7e30a;
+    color: #000000;
+
+    border: none;
+
+    padding: 8px 12px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    margin-right: 5px;
+}
+
+.btn-editar {
+
+    background: #0d6efd;
+    color: white;
+
+    border: none;
+
+    padding: 8px 12px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    margin-right: 5px;
+}
+
+.btn-eliminar {
+
+    background: #dc3545;
+    color: white;
+
+    border: none;
+
+    padding: 8px 12px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 900px) {
+
+    .cabecera-clientes {
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .barra-sistema {
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}

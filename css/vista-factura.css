@@ -1,0 +1,517 @@
+/* ===================================== */
+/* CONFIGURACIÓN GENERAL */
+/* ===================================== */
+
+body {
+
+    margin: 0;
+    padding: 40px;
+
+    background-color: #f2f2f2;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    min-width: 1200px;
+}
+
+
+/* =====================================
+   CONTENEDOR DE ZOOM
+===================================== */
+
+#contenedorZoom {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    transform-origin: top center;
+}
+
+/* ===================================== */
+/* DOCUMENTO ADMINISTRATIVO */
+/* ===================================== */
+
+.recibo-container {
+
+    width: 1000px;
+    min-width: 1000px;
+
+    background-color: #ffffff;
+
+    padding: 50px;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0px 5px 20px
+        rgba(0, 0, 0, 0.15);
+}
+
+
+/* ===================================== */
+/* ENCABEZADO */
+/* ===================================== */
+
+.recibo-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background-color: #000000;
+
+    color: #ffffff;
+
+    padding:
+        30px
+        40px;
+
+    margin-bottom: 45px;
+}
+
+
+/* ===================================== */
+/* EMPRESA */
+/* ===================================== */
+
+.empresa h1 {
+
+    margin: 0;
+
+    font-size: 38px;
+
+    letter-spacing: 3px;
+}
+
+
+.empresa p {
+
+    margin-top: 10px;
+    margin-bottom: 0;
+
+    color: #d8d8d8;
+
+    font-size: 16px;
+}
+
+
+/* ===================================== */
+/* RECIBO */
+/* ===================================== */
+
+.encabezado-derecha {
+
+    text-align: right;
+}
+
+
+.encabezado-derecha h2 {
+
+    margin: 0;
+
+    font-size: 34px;
+
+    letter-spacing: 3px;
+}
+
+
+.encabezado-derecha p {
+
+    margin-top: 10px;
+
+    font-size: 17px;
+}
+
+
+/* ===================================== */
+/* SECCIONES */
+/* ===================================== */
+
+.seccion {
+
+    margin-bottom: 45px;
+}
+
+
+/* ===================================== */
+/* TÍTULOS */
+/* ===================================== */
+
+.seccion h3 {
+
+    margin-top: 0;
+    margin-bottom: 25px;
+
+    padding-bottom: 12px;
+
+    font-size: 24px;
+
+    border-bottom:
+        2px solid #000000;
+
+    letter-spacing: 1px;
+}
+
+
+/* ===================================== */
+/* INFORMACIÓN DEL CLIENTE */
+/* ===================================== */
+
+.cliente-info {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    column-gap: 90px;
+
+    row-gap: 20px;
+}
+
+
+.cliente-info div {
+
+    font-size: 18px;
+
+    line-height: 30px;
+}
+
+
+/* ===================================== */
+/* TABLA DEL SERVICIO */
+/* ===================================== */
+
+.tabla-servicio {
+
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+
+.tabla-servicio thead {
+
+    background-color: #000000;
+
+    color: #ffffff;
+}
+
+
+.tabla-servicio th {
+
+    padding: 18px;
+
+    text-align: center;
+
+    font-size: 16px;
+}
+
+
+.tabla-servicio td {
+
+    padding: 20px;
+
+    text-align: center;
+
+    font-size: 17px;
+
+    border-bottom:
+        1px solid #d9d9d9;
+}
+
+
+/* ===================================== */
+/* RESUMEN DE PAGO */
+/* ===================================== */
+
+.totales {
+
+    width: 600px;
+
+    margin-left: auto;
+
+    border:
+        2px solid #000000;
+}
+
+
+/* ===================================== */
+/* FILAS DE TOTALES */
+/* ===================================== */
+
+.fila-total {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding:
+        25px
+        30px;
+
+    border-bottom:
+        1px solid #d9d9d9;
+}
+
+
+/* ===================================== */
+/* ETIQUETAS */
+/* ===================================== */
+
+.fila-total span {
+
+    font-size: 24px;
+
+    font-weight: bold;
+}
+
+
+/* ===================================== */
+/* MONTOS */
+/* ===================================== */
+
+.fila-total strong {
+
+    font-size: 34px;
+
+    font-weight: bold;
+}
+
+
+/* ===================================== */
+/* TASA */
+/* ===================================== */
+
+.tasa {
+
+    text-align: center;
+
+    padding:
+        15px
+        20px;
+
+    font-size: 14px;
+
+    color: #121212;
+
+    letter-spacing: 1px;
+}
+
+
+/* ===================================== */
+/* INFORMACIÓN DE PAGO */
+/* ===================================== */
+
+#informacionPagos {
+
+    font-size: 18px;
+
+    line-height: 38px;
+}
+
+
+/* ===================================== */
+/* PIE DEL DOCUMENTO */
+/* ===================================== */
+
+.recibo-footer {
+
+    margin-top: 70px;
+
+    padding-top: 30px;
+
+    border-top:
+        1px solid #d9d9d9;
+
+    text-align: center;
+}
+
+
+.recibo-footer p {
+
+    margin:
+        12px
+        0;
+
+    color: #424242;
+
+    font-size: 15px;
+
+    line-height: 28px;
+}
+
+
+/* ===================================== */
+/* BARRA ADMINISTRATIVA */
+/* ===================================== */
+
+.acciones-recibo {
+
+    width: 1000px;
+
+    margin:
+        0 auto
+        25px auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding:
+        14px
+        20px;
+
+    background-color: #ffffff;
+
+    border:
+        1px solid #dcdcdc;
+
+    box-shadow:
+        0 2px 8px
+        rgba(0,0,0,0.08);
+
+    box-sizing: border-box;
+}
+
+
+/* ===================================== */
+/* GRUPOS DE BOTONES */
+/* ===================================== */
+
+.acciones-izquierda,
+.acciones-centro,
+.acciones-derecha {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+/* ===================================== */
+/* BOTONES */
+/* ===================================== */
+
+.acciones-recibo button {
+
+    height: 42px;
+
+    padding:
+        0
+        18px;
+
+    border:
+        1px solid #cfcfcf;
+
+    border-radius: 6px;
+
+    background-color: #ffffff;
+
+    color: #222222;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        all 0.25s ease;
+}
+
+
+.acciones-recibo button:hover {
+
+    background-color: #f5f5f5;
+
+    border-color: #555050;
+}
+
+
+/* ===================================== */
+/* BOTÓN PDF */
+/* ===================================== */
+
+#btnPdf {
+
+    background-color: #000000;
+
+    color: #fbfbf8;
+
+    border:
+        1px solid #000000;
+}
+
+/* ===================================== */
+/* BOTÓN PNG */
+/* ===================================== */
+
+
+#btnPng {
+
+    background-color: #fff311;
+
+    color: #050505;
+
+    border:
+        1px solid #ffdc18;
+}
+
+#btnPdf:hover {
+
+    background-color: #222222;
+}
+
+
+/* ===================================== */
+/* BOTÓN DESHABILITADO */
+/* ===================================== */
+
+.acciones-recibo button:disabled {
+
+    background-color: #d9d9d9;
+
+    color: #777777;
+
+    border-color: #d9d9d9;
+
+    cursor: not-allowed;
+}
+
+
+/* ===================================== */
+/* ZOOM */
+/* ===================================== */
+
+.acciones-centro {
+
+    gap: 8px;
+}
+
+
+.zoom-label {
+
+    font-size: 13px;
+
+    color: #666666;
+
+    margin-right: 5px;
+}

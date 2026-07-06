@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración General</title>
+
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/configuracion.css">
+</head>
+
+<body>
+
+    <!-- Barra Superior -->
+    <header class="barra-superior">
+
+    <button
+        id="btnVolverClientes"
+        class="btn-volver"
+    >
+        ← Volver
+    </button>
+
+    <!-- BOTÓN CERRAR SESIÓN -->
+    <button
+        id="btnCerrarSesion"
+        class="btn-cerrar"
+    >
+        Cerrar Sesión
+    </button>
+
+</header>
+
+    <!-- Contenedor Principal -->
+    <main class="contenedor-configuracion">
+
+        <h1>Configuración General</h1>
+
+        <!-- Tarjeta: Tasa del Día -->
+        <section class="card-configuracion">
+
+            <div class="card-icono">
+                
+            </div>
+
+            <div class="card-contenido">
+
+                <h2>Tasa de Cambio Bs/USD</h2>
+
+                <p>
+                    Ingrese la tasa de cambio actual que utilizará el sistema para
+                    generar los recibos.
+                </p>
+
+                <input
+                    type="number"
+                    id="tasaDia"
+                    placeholder="Ingrese la tasa del día"
+                    step="0.01"
+                >
+
+            </div>
+
+        </section>
+
+        <!-- Tarjeta: Información de Pago -->
+        <section class="card-configuracion">
+
+            <div class="card-icono">
+                
+            </div>
+
+            <div class="card-contenido">
+
+                <h2>Información de Pago</h2>
+
+                <p>
+                    Ingrese la información de pago que aparecerá automáticamente
+                    en el pie de todos los recibos.
+                </p>
+
+                <textarea
+                    id="informacionPagos"
+                    rows="8"
+                    placeholder="Ingrese la información de pago..."
+                ></textarea>
+
+            </div>
+
+        </section>
+
+        <!-- Botón Guardar -->
+        <div class="contenedor-boton">
+
+            <button
+                id="btnGuardarConfiguracion"
+                class="btn-guardar"
+            >
+                Guardar Cambios
+            </button>
+
+        </div>
+
+    </main>
+
+    <!-- API -->
+    <script src="../js/api.js"></script>
+
+    <!-- seguridad -->
+    <script src="../js/auth.js"></script>
+
+    <!-- Módulo de Configuración -->
+    <script src="../js/configuracion.js"></script>
+
+
+</body>
+
+</html>

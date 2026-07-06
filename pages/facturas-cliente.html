@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Historial de Recibos - Starlinkzuela
+    </title>
+
+    <!-- CSS General -->
+    <link
+        rel="stylesheet"
+        href="../css/main.css">
+
+    <!-- CSS exclusivo del historial -->
+    <link
+        rel="stylesheet"
+        href="../css/facturas-cliente.css">
+
+</head>
+
+<body>
+
+    <!-- ===================================== -->
+    <!-- BARRA SUPERIOR -->
+    <!-- ===================================== -->
+
+    <header class="barra-superior">
+
+        <button
+            id="btnVolver"
+            class="btn-volver-barra">
+
+            <span class="icono-volver">
+                ←
+            </span>
+
+            <span>
+                Volver al Perfil
+            </span>
+
+        </button>
+
+    </header>
+
+
+    <!-- ===================================== -->
+    <!-- CONTENEDOR PRINCIPAL -->
+    <!-- ===================================== -->
+
+    <main class="contenedor-historial">
+
+        <!-- ===================================== -->
+        <!-- TÍTULO -->
+        <!-- ===================================== -->
+
+        <section class="titulo-seccion">
+
+            <h1>
+
+                HISTORIAL DE RECIBOS
+
+            </h1>
+
+        </section>
+
+
+        <!-- ===================================== -->
+        <!-- KIT DEL CLIENTE -->
+        <!-- ===================================== -->
+
+        <section class="bloque-kit">
+
+            <span
+                id="kitCliente"
+                class="oculto">
+            </span>
+
+        </section>
+
+
+        <!-- ===================================== -->
+        <!-- MENSAJE SIN RECIBOS -->
+        <!-- ===================================== -->
+
+        <section
+            id="sinRecibos"
+            class="sin-recibos oculto">
+
+            <p>
+
+                Este cliente aún no posee recibos registrados.
+
+            </p>
+
+        </section>
+
+
+        <!-- ===================================== -->
+        <!-- TABLA DE RECIBOS -->
+        <!-- ===================================== -->
+
+        <section
+            id="contenedorTabla"
+            class="tabla-contenedor">
+
+            <table
+                id="tablaRecibos">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            RECIBO
+                        </th>
+
+                        <th>
+                            FECHA
+                        </th>
+
+                        <th>
+                            DESCRIPCIÓN
+                        </th>
+
+                        <th>
+                            MONTO USD
+                        </th>
+
+                        <th>
+                            ESTADO
+                        </th>
+
+                        <th>
+                            ACCIONES
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody
+                    id="tbodyRecibos">
+
+                    <!--
+                        Los recibos serán
+                        cargados dinámicamente
+                        desde facturas-cliente.js
+                    -->
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+
+        <!-- ===================================== -->
+        <!-- MENSAJE DE CARGA -->
+        <!-- ===================================== -->
+
+        <section
+            id="mensajeCarga"
+            class="mensaje-carga">
+
+            <p>
+
+                Cargando recibos...
+
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- ===================================== -->
+    <!-- API GENERAL -->
+    <!-- ===================================== -->
+
+    <script src="../js/api.js"></script>
+
+    <!-- ===================================== -->
+    <!-- CONTROL DE SESIÓN -->
+    <!-- ===================================== -->
+
+    <script src="../js/auth.js"></script>
+
+
+    <!-- ===================================== -->
+    <!-- LÓGICA DEL HISTORIAL -->
+    <!-- ===================================== -->
+
+    <script src="../js/facturas-cliente.js"></script>
+
+
+</body>
+
+</html>

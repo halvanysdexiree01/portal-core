@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Recibo - Starlinkzuela
+    </title>
+
+    <!-- CSS General -->
+    <link
+        rel="stylesheet"
+        href="../css/main.css">
+
+    <!-- CSS exclusivo del recibo -->
+    <link
+        rel="stylesheet"
+        href="../css/vista-factura.css">
+
+</head>
+
+<body>
+
+    <!-- ===================================== -->
+    <!-- BARRA ADMINISTRATIVA -->
+    <!-- ===================================== -->
+
+    <section class="acciones-recibo">
+
+        <div class="acciones-izquierda">
+
+            <button id="btnVolver">
+                ← Volver al Perfil
+            </button>
+
+        </div>
+
+        <div class="acciones-centro">
+
+            <span class="zoom-label">
+                Zoom
+            </span>
+
+            <button id="btnZoomMenos">
+                −
+            </button>
+
+            <button id="btnZoomMas">
+                +
+            </button>
+
+        </div>
+
+        <div class="acciones-derecha">
+
+            <button
+                id="btnPng">
+
+                Descargar PNG
+
+            </button>
+
+            <button
+                id="btnPdf"
+                disabled>
+
+                Descargar PDF
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ===================================== -->
+    <!-- CONTENEDOR DEL ZOOM -->
+    <!-- ===================================== -->
+
+    <div id="contenedorZoom">
+
+        <!-- ===================================== -->
+        <!-- DOCUMENTO ADMINISTRATIVO -->
+        <!-- ===================================== -->
+
+        <main class="recibo-container">
+
+            <!-- ===================================== -->
+            <!-- ENCABEZADO -->
+            <!-- ===================================== -->
+
+            <header class="recibo-header">
+
+                <div class="empresa">
+
+                    <h1>
+                        STARLINKZUELA
+                    </h1>
+
+                    <p>
+                        Servicios Administrativos
+                    </p>
+
+                </div>
+
+                <div class="encabezado-derecha">
+
+                    <h2>
+                        RECIBO
+                    </h2>
+
+                    <p>
+
+                        N°:
+
+                        <span id="idFactura">
+
+                        </span>
+
+                    </p>
+
+                    <p>
+
+                        Fecha:
+
+                        <span id="fechaRecibo">
+
+                        </span>
+
+                    </p>
+
+                </div>
+
+            </header>
+
+            <!-- ===================================== -->
+            <!-- INFORMACIÓN DEL CLIENTE -->
+            <!-- ===================================== -->
+
+            <section class="seccion">
+
+                <h3>
+                    INFORMACIÓN DEL CLIENTE
+                </h3>
+
+                <div class="cliente-info">
+
+                    <div>
+
+                        <strong>Nombre:</strong>
+
+                        <span id="nombreCliente">
+
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <strong>Número de KIT:</strong>
+
+                        <span id="kitCliente">
+
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <strong>Teléfono:</strong>
+
+                        <span id="telefonoCliente">
+
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <strong>Correo:</strong>
+
+                        <span id="correoCliente">
+
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <strong>Plan:</strong>
+
+                        <span id="planCliente">
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ===================================== -->
+            <!-- DETALLE DEL SERVICIO -->
+            <!-- ===================================== -->
+
+            <section class="seccion">
+
+                <h3>
+                    DETALLE DEL SERVICIO
+                </h3>
+
+                <table class="tabla-servicio">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Descripción</th>
+                            <th>Precio Unitario USD</th>
+                            <th>Cantidad</th>
+                            <th>Total USD</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td id="descripcionServicio"></td>
+                            <td id="precioUSD"></td>
+                            <td id="cantidadServicio"></td>
+                            <td id="totalUSD"></td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+            <!-- ===================================== -->
+            <!-- RESUMEN DE PAGO -->
+            <!-- ===================================== -->
+
+            <section class="seccion">
+
+                <h3>
+                    TOTAL A PAGAR
+                </h3>
+
+                <div class="totales">
+
+                    <div class="fila-total">
+
+                        <span>
+                            Total en USD
+                        </span>
+
+                        <strong id="resumenUSD">
+
+                        </strong>
+
+                    </div>
+
+                    <div class="fila-total">
+
+                        <span>
+                            Total en Bs
+                        </span>
+
+                        <strong id="totalBs">
+
+                        </strong>
+
+                    </div>
+
+                    <div class="tasa">
+
+                        Tasa utilizada:
+
+                        <span id="tasaDia">
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ===================================== -->
+            <!-- INFORMACIÓN DE PAGO -->
+            <!-- ===================================== -->
+
+            <section class="seccion">
+
+                <h3>
+                    INFORMACIÓN DE PAGO
+                </h3>
+
+                <div id="informacionPagos">
+
+                </div>
+
+            </section>
+
+            <!-- ===================================== -->
+            <!-- PIE DEL DOCUMENTO -->
+            <!-- ===================================== -->
+
+            <footer class="recibo-footer">
+
+                <p>
+
+                    Documento generado por
+                    Starlinkzuela para fines
+                    administrativos y de control interno.
+
+                </p>
+
+                <p>
+
+                    No constituye una factura fiscal.
+
+                </p>
+
+                <p>
+
+                    Starlinkzuela es una división de
+                    Fororo Inteligente –
+                    Technology Solutions and Research.
+
+                </p>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <!-- ===================================== -->
+    <!-- API DEL SISTEMA -->
+    <!-- ===================================== -->
+
+    <script src="../js/api.js"></script>
+
+    <!-- ===================================== -->
+    <!-- CONTROL DE SESIÓN -->
+    <!-- ===================================== -->
+
+    <script src="../js/auth.js"></script>
+
+
+    <!-- ===================================== -->
+    <!-- LIBRERÍA PARA GENERAR PNG -->
+    <!-- ===================================== -->
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js">
+    </script>
+
+<!-- ===================================== -->
+<!-- LIBRERÍA PDF (PASO 10) -->
+<!-- ===================================== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+
+
+    <!-- ===================================== -->
+    <!-- MÓDULO PNG -->
+    <!-- ===================================== -->
+
+    <script src="../js/png-recibo.js"></script>
+
+
+<!-- ===================================== -->
+<!-- MÓDULO PDF -->
+<!-- ===================================== -->
+
+<script src="../js/pdf-recibo.js"></script>
+
+
+    <!-- ===================================== -->
+    <!-- VISTA DEL RECIBO -->
+    <!-- ===================================== -->
+
+    <script src="../js/vista-factura.js"></script>
+
+
+</body>
+
+</html>

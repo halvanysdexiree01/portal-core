@@ -1,0 +1,539 @@
+/* =======================================
+   CONFIGURACIÓN GENERAL
+======================================= */
+
+body {
+
+    margin: 0;
+
+    padding: 0;
+
+    background: #f8fafc;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: #111827;
+
+}
+
+
+/* =======================================
+   BARRA SUPERIOR
+======================================= */
+
+.barra-superior {
+
+    background: #000000;
+
+    height: 74px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 25px;
+
+    box-shadow:
+        0 2px 8px rgba(
+            0,
+            0,
+            0,
+            0.15
+        );
+
+}
+
+.btn-volver-barra {
+
+    background: transparent;
+
+    border: none;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 500;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+.btn-volver-barra:hover {
+
+    opacity: 0.85;
+
+}
+
+.icono-volver {
+
+    font-size: 28px;
+
+    line-height: 1;
+
+}
+
+
+/* =======================================
+   CONTENEDOR PRINCIPAL
+======================================= */
+
+.contenedor-historial {
+
+    padding: 35px;
+
+}
+
+
+/* =======================================
+   TÍTULO
+======================================= */
+
+.titulo-seccion {
+
+    margin-bottom: 28px;
+
+}
+
+.titulo-seccion h1 {
+
+    margin: 0;
+
+    font-size: 26px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    color: #111827;
+
+}
+
+
+/* =======================================
+   BLOQUE KIT
+======================================= */
+
+.bloque-kit {
+
+    margin-bottom: 20px;
+
+}
+
+.bloque-kit label {
+
+    display: block;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    margin-bottom: 10px;
+
+    color: #111827;
+
+}
+
+.bloque-kit input {
+
+    width: 600px;
+
+    max-width: 40%;
+
+    height: 46px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 10px;
+
+    background: white;
+
+    padding: 0 20px;
+
+    font-size: 14px;
+
+    color: #374151;
+
+    box-sizing: border-box;
+
+}
+
+.bloque-kit input:focus {
+
+    outline: none;
+
+}
+
+
+/* =======================================
+   MENSAJE SIN RECIBOS
+======================================= */
+
+.sin-recibos {
+
+    background: #fff7ed;
+
+    border: 1px solid #fed7aa;
+
+    color: #9a3412;
+
+    padding: 18px;
+
+    border-radius: 12px;
+
+    margin-bottom: 25px;
+
+    text-align: center;
+
+    font-weight: 600;
+
+}
+
+
+/* =======================================
+   TARJETA TABLA
+======================================= */
+
+.tabla-contenedor {
+
+    background: white;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+}
+
+
+/* =======================================
+   TABLA GENERAL
+======================================= */
+
+#tablaRecibos {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+}
+
+
+/* =======================================
+   ENCABEZADO TABLA
+======================================= */
+
+#tablaRecibos thead {
+
+    background: rgba(240, 241, 246, 0.97);
+
+}
+
+#tablaRecibos th {
+
+    padding: 26px 26px;
+
+    text-align: left;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    color: #111827;
+
+    border-bottom: 1px solid #a9b0be;
+
+}
+
+
+/* =======================================
+   FILAS
+======================================= */
+
+#tablaRecibos td {
+
+    padding: 20px 10px;
+
+    font-size: 15px;
+
+    color: #111827;
+
+    border-bottom: 1px solid #edf0f3;
+
+    vertical-align: middle;
+
+}
+
+#tablaRecibos tbody tr:hover {
+
+    background: #fafafa;
+
+}
+
+
+/* =======================================
+   RECIBO
+======================================= */
+
+.col-recibo {
+
+    font-weight: 500;
+
+}
+
+
+/* =======================================
+   MONTO
+======================================= */
+
+.col-monto {
+
+    font-weight: 500;
+
+}
+
+
+/* =======================================
+   SELECT ESTADO
+======================================= */
+
+.select-estado {
+
+    min-width: 10px;
+
+    height: 40px;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    font-weight: 400;
+
+    padding: 0 18px;
+
+    cursor: pointer;
+
+    outline: none;
+
+    transition: 0.3s;
+
+}
+
+
+/* =======================================
+   PAGADA
+======================================= */
+
+.estado-pagada {
+
+    background: #f0faf3;
+
+    border: 1px solid #cfe8d5;
+
+    color: #22863a;
+
+}
+
+
+/* =======================================
+   PENDIENTE
+======================================= */
+
+.estado-pendiente {
+
+    background: #fff9ec;
+
+    border: 1px solid #f3d28c;
+
+    color: #d97706;
+
+}
+
+
+/* =======================================
+   CANCELADA
+======================================= */
+
+.estado-cancelada {
+
+    background: #fff4f4;
+
+    border: 1px solid #f4b4b4;
+
+    color: #dc2626;
+
+}
+
+
+/* =======================================
+   HOVER SELECT
+======================================= */
+
+.select-estado:hover {
+
+    box-shadow:
+        0 2px 10px rgba(
+            0,
+            0,
+            0,
+            0.08
+        );
+
+}
+
+
+/* =======================================
+   BOTÓN VER RECIBO
+======================================= */
+
+.btn-ver {
+
+    border: none;
+
+    background: #1d4ed8;
+
+    color: white;
+
+    height: 40px;
+
+    padding: 0 16px;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    transition: 0.3s;
+
+    white-space: nowrap;
+
+}
+
+.btn-ver:hover {
+
+    background: #1e40af;
+
+    transform: translateY(-1px);
+
+}
+
+
+/* =======================================
+   ICONO OJO
+======================================= */
+
+.btn-ver i {
+
+    font-style: normal;
+
+    font-size: 16px;
+
+}
+
+
+/* =======================================
+   MENSAJE DE CARGA
+======================================= */
+
+.mensaje-carga {
+
+    text-align: center;
+
+    padding: 25px;
+
+    color: #6b7280;
+
+    font-size: 15px;
+
+}
+
+
+/* =======================================
+   OCULTO
+======================================= */
+
+.oculto {
+
+    display: none !important;
+
+}
+
+
+/* =======================================
+   RESPONSIVE TABLET
+======================================= */
+
+@media (max-width: 1200px) {
+
+    .tabla-contenedor {
+
+        overflow-x: auto;
+
+    }
+
+    #tablaRecibos {
+
+        min-width: 1100px;
+
+    }
+
+}
+
+
+/* =======================================
+   RESPONSIVE MÓVIL
+======================================= */
+
+@media (max-width: 768px) {
+
+    .contenedor-historial {
+
+        padding: 20px;
+
+    }
+
+    .titulo-seccion h1 {
+
+        font-size: 24px;
+
+    }
+
+    .bloque-kit input {
+
+        width: 100%;
+
+    }
+
+}
+
+#tablaRecibos th {
+
+    text-align: center;
+
+}
+
+#tablaRecibos td {
+
+    text-align: center;
+
+}
